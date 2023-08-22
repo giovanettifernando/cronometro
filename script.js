@@ -8,16 +8,17 @@ let horas = document.getElementById("horas");
 
 function iniciar() {
     let iniciar = document.getElementsByClassName("button")[0];
-    clear = iniciar.addEventListener ("click", cronometro);
+    iniciar.addEventListener ("click", cronometro);
     }
 
-    let pausar = document.getElementsByClassName("button")[1];
-    pausar.addEventListener ("click", () => (
-        clearInterval(clear);
-    )); 
+// function pausar() {
+//     let pausar = document.getElementsByClassName("button")[1];
+//     pausar.addEventListener ("click", () => (
+//         clearInterval()
+//     ))}; 
         
 function cronometro() {
-   var intervalo = setInterval(() => {
+    setInterval(() => {
         segundos.textContent = parseInt(segundos.textContent, 10) + 1;
     }, 1000);
 }
